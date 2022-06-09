@@ -32,7 +32,7 @@ func main() {
 	cell.Value = "组织架构排序"
 	cell = row.AddCell()
 	cell.Value = "员工级别"
-	for g1i := 1; g1i <= 5; g1i++ {
+	for g1i := 1; g1i <= 10; g1i++ {
 		g1 := strconv.Itoa(g1i)
 		if g1i < 10 {
 			g1 = "0" + strconv.Itoa(g1i)
@@ -42,9 +42,9 @@ func main() {
 		orgFullName := fmt.Sprint(g1Name)
 		orgAccount := fmt.Sprint("110", g1, "00", "00")
 		orgUser := fmt.Sprint(g1Name, "-", "用户")
-		appendUser(sheet, 5, orgAccount, orgUser, orgFullName)
+		appendUser(sheet, 30, orgAccount, orgUser, orgFullName)
 
-		for g2i := 1; g2i <= 5; g2i++ {
+		for g2i := 1; g2i <= 10; g2i++ {
 			g2 := strconv.Itoa(g2i)
 			if g2i < 10 {
 				g2 = "0" + strconv.Itoa(g2i)
@@ -54,9 +54,9 @@ func main() {
 			orgFullName := fmt.Sprint(g1Name, "-", g2Name)
 			orgAccount := fmt.Sprint("110", g1, g2, "00")
 			orgUser := fmt.Sprint(g2Name, "-", "用户")
-			appendUser(sheet, 5, orgAccount, orgUser, orgFullName)
+			appendUser(sheet, 30, orgAccount, orgUser, orgFullName)
 
-			for g3i := 1; g3i <= 5; g3i++ {
+			for g3i := 1; g3i <= 10; g3i++ {
 				g3 := strconv.Itoa(g3i)
 				if g3i < 10 {
 					g3 = "0" + strconv.Itoa(g3i)
@@ -66,7 +66,7 @@ func main() {
 				orgFullName := fmt.Sprint(g1Name, "-", g2Name, "-", g3Name)
 				orgAccount := fmt.Sprint("110", g1, g2, g3)
 				orgUser := fmt.Sprint(g3Name, "-", "用户")
-				appendUser(sheet, 5, orgAccount, orgUser, orgFullName)
+				appendUser(sheet, 30, orgAccount, orgUser, orgFullName)
 			}
 		}
 	}
